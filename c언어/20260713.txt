@@ -34,6 +34,14 @@ int main() {
     int b = 2;
     printf("a:%d, b:%d \n", a, b);
 
+    // 자동개행. %d 같이 데이터랑 같이 섞기 못함
+    puts("그냥 문장만 출력");
+
+    char c1 = 'A';
+    // 무조건 문자 하나만 보여주기. 다음줄 개행 없음
+    putchar(c1);
+    putchar(65);
+
     return 0;
 }
 
