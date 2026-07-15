@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int a = -1;
+    int b = 2;
+    /* if문은 () 안의 결과가 항상 true, false 떨어져요
+    true면 block 안의 내용물 수행하고, false면 안해요 
+    if문은 반드시 검사를 해줘야해요 */
+    if (a == 1 && a == 2) {
+        int a = 1;
+    }
+    else if (a<=0) {
+        /* 프로그램 세계에서는 자식은 부모꺼 다 가져가도 ok 
+        근데 부모는 자식꺼 함수로 못가져감 
+        int a := if문 scope 안에 새로운 공간 만들고...
+        a := 어딘가(부모쪽에)에 만들어진 공간 재사용 */
+        a = 2;
+    }
+    else { // 그게 아니면 어쩔건데
+        /* else 는 if, elseif 에서 false가 나오면 선택되서 실행되는 놈이에요 */
+        int a = 3;
+    }
+    printf("a: %d \n", a);
+    printf("끝 \n");
+    return 0;
+}
+
+
