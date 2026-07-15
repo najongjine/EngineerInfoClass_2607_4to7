@@ -25,4 +25,39 @@ int main() {
     return 0;
 }
 
+--------------------------------
+
+#include <stdio.h>
+
+int main() {
+    int score = 99;
+    char grade = 'F';
+    /* 
+    A : 90~100
+    B : 80~89
+    C : 70~79
+    D : 60~69
+    나머진 F
+    */
+    if (score >= 90 && score <=100) {
+        grade = 'A';
+    }
+    else if (score >= 80 && score <= 89) {
+        grade = 'B';
+    }
+    else if (score >= 70 && score <= 79) {
+        grade = 'C';
+    }
+    else if (score >= 60 && score <= 69) {
+        grade = 'D';
+    }
+    else {
+        grade = 'F';
+    }
+    printf("grade : %c \n", grade);
+    printf("끝 \n");
+    return 0;
+}
+
+
 
