@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+
+int main() {
+    int i = 0;
+
+    /* i가 0 ~ 3 까지 하고, 4가되면 빠져나와요 */
+    while (i<=3) {
+        printf("i: %d \n", i);
+        i++;
+    }
+    while (1) {
+        // 이건 조건체크에서 i가 4랑 같거나 보다크면 강제로 빠져나오기
+        if (i >= 4) {
+            break;
+        }
+        printf("i: %d \n", i);
+        i++;
+    }
+    printf("마지막 i:%d \n", i);
+    return 0;
+}

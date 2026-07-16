@@ -6,7 +6,7 @@ int main() {
     /* if문은 () 안의 결과가 항상 true, false 떨어져요
     true면 block 안의 내용물 수행하고, false면 안해요 
     if문은 반드시 검사를 해줘야해요 */
-    if (a == 1 && a == 2) {
+    if (a == 1 && a == 2) { t, f
         int a = 1;
     }
     else if (a<=0) {
