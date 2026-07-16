@@ -39,3 +39,33 @@ int main() {
     printf("마지막 i:%d \n", i);
     return 0;
 }
+
+-----------------
+
+#include <stdio.h>
+
+int main() {
+    /* 
+    * 1. for
+    * 2. while
+    * 3. do while
+    */
+
+    int i = 0;
+    
+    /*
+    * int i=0 := 초기화 부분. 최초 한번만 실행
+    * 1. i < 3 := 조건체크 부분
+    * 2. { 내용물 }
+    * 3. i++ 
+    * for loop에 int i 라는걸 초기화 부분에 선언했으면, 이건
+    * 새로운 scope에 변수따로 만든거라서, main scope에 있는거랑
+    * 혼동하시면 안됩니다.
+    */
+    for (int i = 0; i < 3;i++) {
+        printf("i: %d \n", i);
+    }
+
+    printf("끝 i: %d \n", i);
+    return 0;
+}
