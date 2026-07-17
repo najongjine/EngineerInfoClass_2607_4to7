@@ -14,3 +14,36 @@ void main() {
 	}
 
 }
+
+---------------
+
+
+#include <stdio.h>
+
+/* 가장 이상적인 함수의 예제 
+char := 리턴 타입(퉤 뱉는거) 을 문자로 하겠다
+mychar := 내가 지어준 이름
+(char c1) := 매개변수를 char 타입의 변수이름 c1으로 하겠다
+*/
+char mychar(char c1) {
+	char c2 = c1 + 1;
+	return c2;
+}
+
+void mychar2(char c1) 
+{
+	printf("%c", c1 + 1);
+}
+char mychar3()
+{
+	return 'A';
+}
+void mychar3()
+{
+	printf("A \n");
+}
+
+void main() {
+
+
+}
