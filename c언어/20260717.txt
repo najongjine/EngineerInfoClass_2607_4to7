@@ -26,5 +26,8 @@ void mychar4()
 
 void main() {
 
-
+	mychar4();
+	printf("%c \n", mychar3());  
+	mychar2('B');
+	char c1=mychar('G');
 }
