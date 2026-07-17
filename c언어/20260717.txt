@@ -1,0 +1,16 @@
+
+#include <stdio.h>
+
+void main() {
+	/*
+	* continue: 아래줄(12~13) 실행하지 마. i++ 로 점프해
+	*/
+	for (int i = 0; i < 3;i++) {
+		if (i == 0) {
+			continue;
+		}
+		printf("i:%d \n", i);
+		printf("매롱\n");
+	}
+
+}
