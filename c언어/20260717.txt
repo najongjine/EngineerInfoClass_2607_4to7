@@ -31,3 +31,21 @@ void main() {
 	mychar2('B');
 	char c1=mychar('G');
 }
+
+-------------------
+
+
+#include <stdio.h>
+
+/* main scope과 달라요. dummy scope에 있는 a는
+main scope에 있는 a와 아무 상관 없어요. */
+void dummy(int a) {
+	a = 999;
+}
+
+void main() {
+	int a = 1;
+	dummy(a);
+	printf("a:%d \n", a);
+	
+}
