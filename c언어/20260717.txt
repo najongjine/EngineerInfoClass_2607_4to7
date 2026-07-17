@@ -1,25 +1,6 @@
 
 #include <stdio.h>
 
-void main() {
-	/*
-	* continue: 아래줄(12~13) 실행하지 마. i++ 로 점프해
-	*/
-	for (int i = 0; i < 3;i++) {
-		if (i == 0) {
-			continue;
-		}
-		printf("i:%d \n", i);
-		printf("매롱\n");
-	}
-
-}
-
----------------
-
-
-#include <stdio.h>
-
 /* 가장 이상적인 함수의 예제 
 char := 리턴 타입(퉤 뱉는거) 을 문자로 하겠다
 mychar := 내가 지어준 이름
@@ -38,7 +19,7 @@ char mychar3()
 {
 	return 'A';
 }
-void mychar3()
+void mychar4()
 {
 	printf("A \n");
 }
