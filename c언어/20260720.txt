@@ -46,3 +46,24 @@ int main() {
 
 	return 0;
 }
+
+-------------------
+
+
+#include <stdio.h>
+
+int main() {
+	int ar1[3][2] = {
+		{1,2},
+		{3,4},
+		{5,6}
+	};
+	printf("ar1: %p \n", ar1);
+	printf("ar1[0]: %p \n", ar1[0]);
+	printf("ar1[1]: %p \n", ar1[1]);
+	printf("ar1[2]: %p \n", ar1[2]);
+	printf("ar1[2][0]: %d \n", ar1[2][0]);
+	printf("*(*(ar1+2)+0): %d \n", *(*(ar1+2)+0));
+
+	return 0;
+}
