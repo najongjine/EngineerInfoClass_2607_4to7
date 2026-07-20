@@ -18,3 +18,31 @@ int main() {
 
 	return 0;
 }
+
+----------------------
+
+
+#include <stdio.h>
+
+int main() {
+	char c1 = 'a';
+	char c2 = 'a';
+	char str1[10] = { 'h','e','l','l','o','\0'};
+	char str2[10] = { 'h','e','l','l','o','\0'};
+	char str3[10] = "hello";
+
+	printf("c1 이랑 c2랑 같니? %d \n", c1 == c2); // 1
+
+	/* 이건 str1이 가지고 있는 주소랑 str2가 가지고 있는 주소를 
+	비교한것. 배열을 선언하면 무조건 새로운 공간에 공간을 만들기
+	때문에 주소는 틀림 */
+	printf("str1 이랑 str2랑 같니? %d \n", str1 == str2); // 0
+
+	for (int i = 0; i < 10;i++) {
+		if (str3[i] == '\0') break;
+		printf("%c", str3[i]);
+	}
+	
+
+	return 0;
+}
