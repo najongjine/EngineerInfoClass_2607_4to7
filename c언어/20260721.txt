@@ -45,3 +45,23 @@ int main(void) {
 
     return 0;
 }
+
+
+-----------------
+
+#include <stdio.h>
+
+int main(void) {
+    /* 배열첨자 [] 가 나왔다 = 무조건 heap에 새로 깔아버려  */
+    char str1[10] = "abc";
+    /* 포인터 | String 타입으로 했다 = 처음 등장은 새로깔기
+    그다음에 완전히 똑같은게 나오면 재사용 */
+    char* str2 = "abc";
+    char* str3 = "abc";
+
+    printf("str1: %p \n", str1);
+    printf("str2: %p \n", str2);
+    printf("str3: %p \n", str3);
+
+    return 0;
+}
