@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(void) {
+    int row0[2] = { 1, 2 };
+    int row1[2] = { 3, 4 };
+    int row2[2] = { 5, 6 };
+
+    int* ar1[3] = {
+        row0,
+        row1,
+        row2
+    };
+
+    ar1[0] = ar1[1];
+
+    printf("%p\n", (void*)ar1[0]);
+    printf("%p\n", (void*)ar1[1]);
+
+    ar1[0][0] = 100;
+
+    printf("%d\n", ar1[0][0]);
+    printf("%d\n", ar1[1][0]);
+
+    return 0;
+}
