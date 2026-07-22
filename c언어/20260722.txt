@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+void fn1(int* i) { 
+    *i += 10; 
+}
+int fn2(int i) { 
+    i += 10; 
+    return i; 
+}
+
+void fn34(int* p) {
+    printf("4. %d\n", *p + *(p + 3));
+}
+
+int main() {
+    int i = 2;
+    int list[] = { 2, 4,6 };
+
+    fn1(&i);
+    printf("1. %d\n", i);
+
+    list[0]=fn2(i);
+    printf("2. %d\n", i);
+
+    fn34(list);
+
+    return 0;
+}
