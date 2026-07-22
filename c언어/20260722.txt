@@ -38,3 +38,24 @@ int main() {
 
     return 0;
 }
+
+---------------------
+/* return 이라는 코드를 만나면, 실행중인 함수를 빠져나가게 되요.
+즉, 밑에있는 코드가 실행이 안되요 */
+#include <stdio.h>
+
+void change(int* a) {
+    *a = 1;
+    if(*a % 2 != 0)
+        return;
+    
+    *a = 3;
+}
+
+int main() {
+    int num = 5;
+    change(&num);
+    printf("num:%d \n",num);
+
+    return 0;
+}
