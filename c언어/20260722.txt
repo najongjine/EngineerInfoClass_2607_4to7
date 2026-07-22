@@ -1,15 +1,27 @@
 #include <stdio.h>
 
+/*
+* c언어에선 숫자, 문자, 구조체만 자료결합도
+나머지는 다 stamp 결합도
+(c언어는 포인터로 강제 stamp 결합도를 만들수 있음)
+*/
+
+/* stamp 결합도.
+2순위로 좋은 결합도
+*/
 void fn1(int* i) { 
     *i += 10; 
 }
+
+/* 자료 결합도
+main 함수에 있던 i는 아무런 손상이 안가요 */
 int fn2(int i) { 
     i += 10; 
     return i; 
 }
 
 void fn34(int* p) {
-    printf("4. %d\n", *p + *(p + 3));
+    printf("4. %d\n", *p + *(p + 2));
 }
 
 int main() {
