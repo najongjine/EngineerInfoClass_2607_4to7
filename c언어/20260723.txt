@@ -59,3 +59,19 @@ int main() {
 
     return 0;
 }
+
+----------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct Person{
+    char* name;
+    int money;
+}Person;
+
+int main() {
+    Person p1 = { "pepe",100 };
+
+    return 0;
+}
