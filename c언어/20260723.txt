@@ -8,10 +8,22 @@ int main() {
     int a2[] = { 1,2,3 };
 
     int* par;
+    /* malloc := heal 영역에 공간 새로 만들어 
+    (sizeof(int)  여기를 잘 봐야해요.
+    * 2 이런게 이으면 2칸 만들어.
+    없으면 1칸만 만들어 */
     par = (int*)malloc(sizeof(int));
+    printf("예전 par: %p \n", par);
     *par = 5;
+    par[0] = 5;
     
+    /* malloc으로 만든 공간의 크기를 변경하고 싶을때 쓰는놈
+    * sizeof(int) * 3   새로운 공간 3개 새로 만들어. (예전공간 + 새로운 3 공간 아님)
+    * 그 공간의 시작주소 뱉어서 par에 저장해
+    * 예전 par 에 있던 데이터는 새로운 공간으로 이사시켜
+    */
     par = (int*)realloc(par, sizeof(int) * 3);
+    printf("realloc par: %p \n", par);
     printf("par:%d \n", *par);
 
 
