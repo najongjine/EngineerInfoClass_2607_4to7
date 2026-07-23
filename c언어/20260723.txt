@@ -29,3 +29,33 @@ int main() {
 
     return 0;
 }
+
+
+------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int* func(int* arr, int size) {
+    int* result = (int*)malloc(sizeof(int) * size);
+
+    for (int i = 0; i < size; i++) {
+        result[i] = *(arr + size - 1 - i) + i;
+    }
+
+    return result;
+}
+
+int main() {
+    int arr[] = { 1, 2, 3, 4 };
+    int length = sizeof(arr) / sizeof(arr[0]);
+    int* result = func(arr, 4);
+
+    for (int i = 0; i < 4; i++) {
+        printf("%d ", result[i]);
+    }
+
+    free(result);
+
+    return 0;
+}
