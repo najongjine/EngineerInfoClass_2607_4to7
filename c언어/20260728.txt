@@ -28,3 +28,36 @@ int main() {
     
     return 0;
 }
+
+------------------
+
+#include <stdio.h>
+
+typedef struct Node {
+    int v;
+}Node;
+
+/* 스탬프결합도, 자료결합도를 어떻게 구분해요?
+* c언어는 구분이 쉬운 편이에요
+* 기술적설명: 주소가 가면 스탬프 결합도. 그냥 데이터가 가면 자료 결합도
+* 
+* c언어는 숫자, 문자, 구조체 얘네만 자료 결합도. 나머지는 다 stamp 결합도
+* 
+* 자바,python: 숫자, bool, 문자, 문자열 얘네만 자료 결합도. 나머지는 다 stamp 결합도
+* 
+* primitive 자료형(기본 자료형)은 자료 결합도가 되요
+* int double bool char struct
+*/
+void dummy(char a[]) {
+    *a = *(a + 1);
+    *(a + 2) = a[3];
+}
+
+int main() {
+    char str1[4] = "abc";
+    char* str2 = str1;
+    dummy(str2);
+    printf("%s \n", str1);
+    
+    return 0;
+}
