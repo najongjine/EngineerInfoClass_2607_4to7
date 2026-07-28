@@ -12,6 +12,11 @@ int main() {
     int* a3[2] = { a, a2 };
     printf("%d \n", a3[0][0]);
     printf("%d \n", *(*(a3+1)+1));
+
+    int a9=1;
+    int* pa9=&a9;
+    printf("%d \n",*pa9);
+    printf("%d \n",pa9[0]);
     
     return 0;
 }
