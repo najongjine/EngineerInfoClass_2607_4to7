@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+typedef struct Node {
+    int v;
+    struct Node* n;
+}Node;
+
+int main() {
+    int ar1[3] = { 0,1,2 };
+    Node n1 = { 0,NULL };
+    Node n2 = { 1,NULL };
+    Node n3 = { 2,NULL };
+
+    n1.n = &n2;
+    n2.n = &n3;
+
+    for (int i = 0; i < 3;i++) {
+        //printf("%d \n", ar1[i]);
+    }
+
+    Node* head = &n1;
+    for (; head ; head= head->n) {
+        printf("%d \n", head->v);
+    }
+
+
+    return 0;
+}
