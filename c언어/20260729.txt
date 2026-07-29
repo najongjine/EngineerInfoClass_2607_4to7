@@ -26,3 +26,63 @@ int main() {
 
     return 0;
 }
+
+-----------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct Node {
+    int v;
+    struct Node* l;
+    struct Node* r;
+} Node;
+
+// 노드 생성 함수
+Node* createNode(int value) {
+    Node* newNode = malloc(sizeof(Node));
+
+    if (newNode == NULL) {
+        printf("메모리 할당 실패\n");
+        exit(1);
+    }
+
+    newNode->v = value;
+    newNode->l = NULL;
+    newNode->r = NULL;
+
+    return newNode;
+}
+
+int main() {
+    /*
+            1
+           / \
+          2   3
+         / \
+        4   5
+    */
+
+    Node* root = createNode(1);
+
+    root->l = createNode(2);
+    root->r = createNode(3);
+
+    root->l->l = createNode(4);
+    root->l->r = createNode(5);
+
+    printf("루트: %d\n", root->v);
+    printf("왼쪽: %d\n", root->l->v);
+    printf("오른쪽: %d\n", root->r->v);
+    printf("왼쪽의 왼쪽: %d\n", root->l->l->v);
+    printf("왼쪽의 오른쪽: %d\n", root->l->r->v);
+
+    // 자식 노드부터 메모리 해제
+    free(root->l->l);
+    free(root->l->r);
+    free(root->l);
+    free(root->r);
+    free(root);
+
+    return 0;
+}
