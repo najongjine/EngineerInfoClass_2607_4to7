@@ -21,8 +21,17 @@ class Car:
 a1=Car()
 b=Car()
 
+print(f"Car.p:{Car.p}") # 1234
+print(f"a1.p:{a1.p}") # 1234
+print(f"b.p:{b.p}") # 1234
 
-print(a1.p)
-b.p # "123"
-a1.p # "123"
-Car.p # "123"
+"""
+Car.p = "987" 이러면 static 영역에 있는 p의 값을 바꾸는 거라서, 전체 영향이 가요
+그런데 그냥 instance.p=값   이러면 이건 static 영역의 값을 바꾸는게 아니라
+맴버변수 하나 더 만드는게 되요
+"""
+b.p="987"
+print("-----b.p='987'-----")
+print(f"Car.p:{Car.p}") # 1234
+print(f"a1.p:{a1.p}") # 1234
+print(f"b.p:{b.p}") # 987
