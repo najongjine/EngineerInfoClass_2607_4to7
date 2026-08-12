@@ -1,0 +1,37 @@
+package itsecmorning_2607;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+abstract class Vehicle {
+    String name;
+    Vehicle(){
+    	System.out.println("v");
+    }
+    abstract public String getName(String val);
+ 
+    public String getName() {
+            return "Vehicle name: " + name;
+    }
+}
+class Car extends Vehicle {
+    public Car(String val) {
+            name=super.name=val;
+    }
+    public String getName(String val) {
+            return "Car name:" + val;
+    }
+    public String getName() {
+            return super.getName();
+    }
+}
+
+public class itsecmorning_2607 {
+	public static void main(String[] args) {
+		Vehicle obj = new Car("viper");
+	    System.out.println(obj.getName());
+		
+	}
+
+}
