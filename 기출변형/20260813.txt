@@ -1,0 +1,40 @@
+package itsecmorning_2607;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+class Parent {
+    int x = 10;
+    int y=1;
+    Parent() {
+        this(50);
+    }
+ 
+    Parent(int x) {
+        this.x = x;
+    }
+ 
+    int getX() {
+        return x;
+    }
+}
+class Child extends Parent {
+    int x = 40;
+    
+    Child() {
+        this(50);
+        System.out.println(super.x+x);
+    }
+    Child(int x) {
+        this.x = x+y;
+    }
+}
+
+public class itsecmorning_2607 {
+	public static void main(String[] args) {
+		Child obj = new Child();
+        System.out.println(obj.getX());
+		
+	}
+
+}
