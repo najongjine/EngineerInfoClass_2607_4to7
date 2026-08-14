@@ -32,6 +32,7 @@ int main(int argc, char const* argv[]) {
     while (!isEmpty()) {
         printf("%d", take());
         into(3); into(1); printf("%d", take());
+        break;
     }
 
     return 0;
