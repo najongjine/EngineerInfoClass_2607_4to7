@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 class A {
-	int a=0;
+	int a=0; // 1
 	A(){
+		System.out.println("A생성");
 		a=1;
 		paint();
 	}
@@ -19,7 +20,6 @@ class A {
     }
 }
 class B extends A {
-	int a=3;
     public void paint() {
         super.draw();
         System.out.print("C"+a);
