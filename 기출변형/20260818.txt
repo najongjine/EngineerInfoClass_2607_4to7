@@ -1,0 +1,39 @@
+package itsecmorning_2607;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+class A {
+	int a=0;
+	A(){
+		a=1;
+		paint();
+	}
+    public void paint() {
+        System.out.print("A");
+        draw();
+    }
+    public void draw() {
+        System.out.print("B");
+        draw();
+    }
+}
+class B extends A {
+	int a=3;
+    public void paint() {
+        super.draw();
+        System.out.print("C"+a);
+        this.draw();
+    }
+    public void draw() {
+        System.out.print("D"+a);
+    }
+}
+public class itsecmorning_2607 {
+	public static void main(String[] args) {
+		A b = new B();
+        b.paint();
+        b.draw();
+	}
+
+}
