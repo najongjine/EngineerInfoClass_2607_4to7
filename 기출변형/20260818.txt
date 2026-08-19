@@ -38,3 +38,26 @@ public class itsecmorning_2607 {
 	}
 
 }
+
+
+-----------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct Data {
+    char c;
+    struct Data* numPtr;
+} Data;
+int main() {
+    int num = 65;
+    Data d1;
+    Data* d2 = malloc(sizeof(struct Data));
+    d1.c = num;
+    d2->numPtr = &d1;
+    d2->numPtr->c += 1;
+    printf("%c\n", d1.c);
+    printf("%d\n", d2->numPtr->c);
+
+    free(d2);
+    return 0;
+}
