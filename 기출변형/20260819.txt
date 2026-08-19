@@ -10,18 +10,18 @@ class A {
 		a=1;
 		paint();
 	}
-    public void paint() {
+    public void paint() { // 오긴 옴
         System.out.print("A");
         draw();
     }
-    public void draw() {
+    public void draw() { // super 라고 명시하면 오버라이드 체크 안함
         System.out.print("B");
-        draw();
+        draw(); // 그냥 메소드 호출은 override 호출한다
     }
 }
 class B extends A {
-    B(){ super(); }
-    public void paint() {
+	B(){super();}
+    public void paint() { // 오버라이드 됬네
         super.draw();
         System.out.print("C"+a);
         this.draw();
